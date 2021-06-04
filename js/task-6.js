@@ -16,7 +16,12 @@ function isInputValid(event) {
   }
 }
 function onInputBlur() {
-  input.value = "";
-  input.classList.remove("invalid");
-  input.classList.remove("valid");
+  if (currentLength === dataLength) {
+    input.classList.remove("invalid");
+    input.classList.add("valid");
+  }
+  if (currentLength !== dataLength) {
+    input.classList.remove("valid");
+    input.classList.add("invalid");
+  }
 }
