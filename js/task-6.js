@@ -10,10 +10,10 @@ function isInputValid(event) {
     input.classList.remove(remClass);
     input.classList.add(addClass);
   }
+
   if (currentLength === dataLength) {
     updateClass("valid", "invalid");
-  }
-  if (currentLength !== dataLength) {
+  } else {
     updateClass("invalid", "valid");
   }
 }
